@@ -4,6 +4,29 @@ header {
 	width: 100%;
 	text-align: center;
 }
+.mask{
+	height: 400px;
+	width: 400px;
+	top: 203px;
+	left: 474px;
+	margin: 0 auto;
+	background-color: black;
+	opacity: 0.5;
+	filter:alpha(opacity=50);
+	display: none;
+	position: absolute;
+	z-index: 100;
+	border-radius: 10px;
+}
+.fail{
+	position: absolute;
+	top: 350px;
+	left: 600px;
+	z-index: 101;
+	display: none;
+	font: bold 40px '微软雅黑';
+	color: red;
+}
 header h1 {
 	font-family: Arial;
 	font-size: 40px;

@@ -52,6 +52,12 @@ var init = function() {
 		}
 	}
 	updateBoardView();
+
+	score = 0;
+	updateScore(score);
+	$('.mask').css('display','none');
+	$('.fail').css('display','none');
+
 }
 
 var updateBoardView = function() {
@@ -206,7 +212,9 @@ var isgameover = function() {
 }
 
 var gameover = function() {
-	alert("gameover!");
+	alert("好可惜！差一点点就超神了！");
+	$('.mask').show();
+	$('.fail').show();
 }
 
 var moveLeft = function() {
@@ -303,7 +311,7 @@ var moveUp = function() {
 						board[k][j] *= 2;
 						board[i][j] = 0;
 						//add score
-						score += board[i][k];
+						score += board[k][j];
 						updateScore(score);
 						//进行过合并了
 						hasConflicted[k][j] = true;
@@ -339,7 +347,7 @@ var moveDown = function() {
 						board[k][j] *= 2;
 						board[i][j] = 0;
 						//add score
-						score += board[i][k];
+						score += board[k][j];
 						updateScore(score);
 						//进行过合并了
 						hasConflicted[k][j] = true;
