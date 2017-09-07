@@ -44,3 +44,16 @@ startx = event.touches[0].pageX;
 starty = event.touches[0].pageY;
 endx = event.changedTouches[0].pageX;
 endy = event.changedTouches[0].pageY;
+
+Web Applications
+运行在服务器上
+通过浏览器执行
+使用前端技术 HTML CSS Javascript
+
+Native Applications
+通过App Store下载 
+直接运行在移动设备上
+使用技术 Objective-C（iOS） Java（Android）
+
+Dropbox 提供免费发布webapps的平台 DropPages：
+限制： 静态网站 速度稍慢 域名不宜记忆
