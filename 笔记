@@ -1,0 +1,46 @@
+笔记
+2048  游戏
+做游戏 CSS HTML js jquery
+MVC结构：M模型层 游戏数据 V视图层 UI-HTML/CSS C控制层 游戏主逻辑-js/jquery
+主逻辑变化->动画效果逻辑->视图层  底层游戏架构逻辑
+
+游戏制作 = 勇于尝试新技术 + 勤思考多学习 + 多看游戏多玩游戏 + 思考游戏为什么这样设计 + 思考游戏是怎么实现的
+
+游戏循环：
+基于时间的游戏循环
+基于玩家响应的游戏循环
+
+左移操作：
+1.落脚点是否为空
+2.落脚点是否可以合并
+3.是否有障碍物
+
+移动的动画没有显示：updateBoardView();执行时showMoveAnimation(i, j, i, k);还没执行完。直接刷新就覆盖掉了动画效果，需要减慢刷新棋盘速度。
+// 随机一个位置
+var randx = Math.floor(Math.random() * 4);
+var randy = Math.floor(Math.random() * 4);
+while(true) {
+	if(board[randx][randy] == 0)
+		break;
+	randx = Math.floor(Math.random() * 4);
+	randy = Math.floor(Math.random() * 4);
+}
+生成随机数在某些情况下计算时间过长
+
+遗留问题：优化产生随机数的方法？
+增加分数时添加动画？
+gameover不仅仅是alert？
+个性化自己的游戏？私人订制
+
+如何支持移动端：
+1、前端显示适应屏幕尺寸 自适应
+viewport元信息
+<meta name = "viewport" content= "width =[pixel_value|device-width],heigth=[pixel_value|device-height],initial-scale = float_value, minimum-scale = float_value, maximum-scale = float_value, user-scalable = [yes|no]"
+
+100%
+2、交互方式变为触控方式
+touchstart touchend
+startx = event.touches[0].pageX;
+starty = event.touches[0].pageY;
+endx = event.changedTouches[0].pageX;
+endy = event.changedTouches[0].pageY;
