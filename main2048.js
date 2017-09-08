@@ -17,6 +17,7 @@ var prepareForMobile = function() {
 		girdContainerWidth = 400;
 		cellSpace = 16;
 		cellSideLength = 80;
+		$('.fail').css('font-size', 40);
 	}
 	$('#grid-container').css('width', girdContainerWidth - 2*cellSpace);
 	$('#grid-container').css('height', girdContainerWidth - 2*cellSpace);
@@ -25,6 +26,14 @@ var prepareForMobile = function() {
 	$('.grid-cell').css('width', cellSideLength);
 	$('.grid-cell').css('height', cellSideLength);
 	$('.grid-cell').css('border-radius', 0.02*cellSideLength);
+	$('.mask').css('width', girdContainerWidth - 2*cellSpace);
+	$('.mask').css('height', girdContainerWidth - 2*cellSpace);
+	$('.mask').css('padding', cellSpace);
+	$('.mask').css('border-radius', 0.02*girdContainerWidth);
+	$('.mask').css('top', 0);
+	$('.mask').css('left', 0);
+	$('.fail').css('top', 0.2 * girdContainerWidth);
+	$('.fail').css('left', 0.3 * girdContainerWidth);
 }
 
 var newgame = function() {
